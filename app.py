@@ -169,7 +169,8 @@ with tab1:
             x="date",
             y="value",
             color="country",
-            title=f"{first_indicator} ({year_range[0]}–{year_range[1]})"
+            labels={"value": first_indicator, "date": "Year"},
+            title=f"{first_indicator} ({year_range[0]}-{year_range[1]})"
         )
         fig = style_fig(fig)
         st.plotly_chart(fig, use_container_width=True)
@@ -281,9 +282,19 @@ with tab4:
         st.info("Select at least one indicator.")
     else:
         first_indicator = indicators[0]
-        latest_year = combined["date"].max()
 
-        map_df = combined[combined["date"] == latest_year]
+        # Build map data directly from raw_data
+        map_rows = []
+        for c in selected_countries:
+            df = raw_data[c][first_indicator]
+            if not df.empty:
+                latest_row = df.iloc[-1]
+                map_rows.append({
+                    "country": c,
+                    first_indicator: latest_row["value"]
+                })
+
+        map_df = pd.DataFrame(map_rows)
 
         fig_map = px.choropleth(
             map_df,
@@ -292,10 +303,12 @@ with tab4:
             color=first_indicator,
             hover_name="country",
             color_continuous_scale="Viridis",
-            title=f"{first_indicator} in {latest_year}"
+            title=f"{first_indicator} (Latest Available Year)"
         )
+
         fig_map = style_fig(fig_map)
         st.plotly_chart(fig_map, use_container_width=True)
+
 
 # -----------------------------
 # TAB 5 — DOWNLOAD
