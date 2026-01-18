@@ -1,8 +1,10 @@
 World Bank Multi‑Country Development Dashboard
 An interactive Streamlit dashboard that visualizes key development indicators — GDP per capita, CO₂/GHG emissions, and New Firm Density — using the World Bank API.
 The dashboard allows users to compare trends across multiple countries and explore relationships between economic, environmental, and entrepreneurial indicators.
+
 🔗 Live App:
 https://worldbank-dashboard-myuxqqhpjqwpgcks3makri.streamlit.app/
+
 🔗 GitHub Repository:
 https://github.com/Lovepreet-Kapila/worldbank-dashboard
 
