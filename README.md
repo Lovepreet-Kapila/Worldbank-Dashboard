@@ -9,7 +9,7 @@ https://worldbank-dashboard-myuxqqhpjqwpgcks3makri.streamlit.app/
 https://github.com/Lovepreet-Kapila/worldbank-dashboard
 
 
-1. Introduction
+## 1. Introduction
 This project analyzes long‑term development patterns using publicly available data from the World Bank.
 The dashboard enables users to:
 - Compare indicators across countries
@@ -19,14 +19,15 @@ The dashboard enables users to:
 The primary analytical focus is a comparison between Germany and India, representing a developed and a developing economy.
 Additional countries are included for broader exploration.
 
-2. Data Source
+## 2. Data Source
 All data is retrieved from the World Bank Open Data API, including:
 - GDP per capita (NY.GDP.PCAP.CD)
 - GHG emissions (EN.GHG.ALL.LU.MT.CE.AR5)
 - New Firm Density (IC.BUS.NDNS.ZS)
+
 Data is processed using Python, Pandas, and Plotly, and displayed through a Streamlit interface.
 
-3. Dashboard Visualizations
+## 3. Dashboard Visualizations
 Below is a detailed explanation of each graph included in the dashboard, similar to the YouTube example you shared.
 
 3.1 Trend Over Time (Line Chart)
@@ -103,7 +104,7 @@ What it reveals:
 Example Insight:
 GHG emissions are highest in rapidly industrializing countries like China and India.
 
-4. Research Focus: Germany vs. India
+## 4. Research Focus: Germany vs. India
 The accompanying PDF report answers three research questions:
 RQ1: How does GDP per capita differ between Germany and India?
 Germany maintains a much higher GDP per capita, reflecting its status as a high‑income economy.
@@ -112,16 +113,19 @@ Germany’s emissions decline; India’s rise — showing different stages of en
 RQ3: How does New Firm Density compare?
 Germany has a stronger entrepreneurial ecosystem; India’s values are lower and more volatile.
 
-5. Technologies Used
+## 5. Technologies Used
 - Python
 - Streamlit
 - Pandas
 - Plotly
 - World Bank API
 
-6. Installation (Optional)
+## 6. Installation (Optional)
+
 pip install -r requirements.txt
+
 streamlit run app.py
 
-8. License
+## 8. License
+   
 This project is for academic purposes.
