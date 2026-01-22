@@ -48,10 +48,15 @@ streamlit run app.py
 ## 4. Project Structure
 
 ├── app.py                     # Main Streamlit dashboard
+
 ├── requirements.txt           # Python dependencies
+
 ├── README.md                  # Project documentation
+
 ├── data/                      # (Optional) Cached or downloaded data
+
 ├── .streamlit/
+
 │   └── config.toml            # Dashboard theme configuration
 
 ## 5. API Choice
