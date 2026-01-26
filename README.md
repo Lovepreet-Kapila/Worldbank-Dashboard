@@ -28,6 +28,7 @@ All data is retrieved programmatically from the World Bank Open Data API, includ
 - GDP per capita — NY.GDP.PCAP.CD
 - GHG emissions — EN.GHG.ALL.LU.MT.CE.AR5
 - New Firm Density — IC.BUS.NDNS.ZS
+
 Data is processed using Python, Pandas, and Plotly, and displayed through a Streamlit interface.
 
 ## 3. Project Setup
@@ -53,7 +54,6 @@ streamlit run app.py
 
 ├── README.md                  # Project documentation
 
-├── data/                      # (Optional) Cached or downloaded data
 
 ├── .streamlit/
 
